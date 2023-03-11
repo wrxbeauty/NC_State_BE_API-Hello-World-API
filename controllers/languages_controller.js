@@ -2,7 +2,6 @@ const express = require('express')
 const languages = express.Router()
 const Language = require('../models/language.js')
 
-module.exports = languages
 
 // Seed:
 languages.get('/seed', (req, res) => {
@@ -57,3 +56,5 @@ languages.get('/:name', (req, res) => {
             res.json(foundLanguage)
         })
 })
+
+module.exports = languages
